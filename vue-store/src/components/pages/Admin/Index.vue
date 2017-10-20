@@ -45,10 +45,10 @@ export default {
       this.routePath = [];
       this.splitPath().forEach((element) => {
         if (element !== '') {
-          this.routePath.push({
+          this.routePath = [...this.routePath, {
             text: this.upperCaseParse(element),
             to: { name: this.upperCaseParse(element) },
-          });
+          }];
         }
       }, this);
     },
